@@ -45,14 +45,14 @@
 </head>
 <body>
 
-    <h1>Website Monitor (Auto Tweaking with Pause)</h1>
+    <h1>Website Monitor</h1>
     <p>Welcome, {{ username }}!</p>
     <button onclick="logout()">Logout</button>
 
     <h2>Enter a Website Link</h2>
     <form id="tweakForm">
         <input type="text" id="websiteLink" name="website" placeholder="Enter website URL here (https://)" value="{{ website }}" required><br>
-        <button type="submit">Start Auto Tweak Every 2 Minutes</button>
+        <button type="submit">Start Auto Tweak Every 30 sec</button>
         <button type="button" id="pauseButton" onclick="pauseTweaking()">Pause Tweaking</button>
         <button type="button" id="resumeButton" onclick="resumeTweaking()">Resume Tweaking</button>
     </form>
