@@ -1,8 +1,14 @@
 services:
   - type: web
-    name: your-app-name
+    name: monitor-app
     env: python
+    region: oregon  # Set the region based on your preference or closest data center
     buildCommand: |
       apt-get update && apt-get install -y portaudio19-dev
       pip install -r requirements.txt
     startCommand: gunicorn app:app
+    envVars:
+      - key: MONGO_URI
+        value: "mongodb+srv://rh0665971:q7DFaWad4RKQRiWg@cluster0.gusg4.mongodb.net/?retryWrites=true&w=majority"
+      - key: DB_NAME
+        value: "monitor"
